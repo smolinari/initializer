@@ -1,0 +1,38 @@
+{
+  "name" : "appserver-io/initializer",
+  "description" : "Initializer console app for starting new projects.",
+  "homepage" : "https://github.com/appserver-io/initializer",
+  "license" : "OSL-3.0",
+  "require" : {
+    "php" : ">=5.4.0"
+  },
+  "autoload" : {
+    "psr-0" : {
+      "AppserverIo\\Initializer" : [
+        "src/",
+        "tests/"
+      ]
+    }
+  },
+  "authors" : [
+    {
+      "name" : "Scott Molinari",
+      "email" : "scott.molinari@adduco.de",
+      "homepage" : "http://www.adduco.de",
+      "role" : "Developer"
+    }
+  ],
+  "config" : {
+    "github-oauth" : {
+      "github.com" : "604a3b5943228e434a5b52c2ba3cf72286d30db9"
+    }
+  },
+  "support" : {
+    "email" : "t.wagner@techdivision.com",
+    "issues" : "https://github.com/appserver-io/initializer/issues",
+    "source" : "https://github.com/appserver-io/initializer"
+  },
+  "keywords" : [
+    "appserver project initialization"
+  ]
+}

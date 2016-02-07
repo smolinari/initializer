@@ -1,0 +1,22 @@
+#!/usr/bin/env php
+<?php
+
+require('/opt/appserver/vendor/autoload.php');
+
+
+use AppserverIo\Initializer\Application;
+use AppserverIo\Initializer\HelpCommand;
+use AppserverIo\Initializer\NewCommand;
+
+$appVersion = '0.1.0-DEV';
+
+// Windows uses Path instead of PATH
+if (!isset($_SERVER['PATH']) && isset($_SERVER['Path'])) {
+    $_SERVER['PATH'] = $_SERVER['Path'];
+}
+
+$app = new Application('Appserver Initializer', $appVersion);
+$app->add(new HelpCommand($appVersion));
+$app->add(new NewCommand());
+$app->setDefaultCommand('about');
+$app->run();
