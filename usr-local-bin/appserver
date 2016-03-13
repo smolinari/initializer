@@ -5,7 +5,7 @@ require('/opt/appserver/vendor/autoload.php');
 
 
 use AppserverIo\Initializer\Application;
-use AppserverIo\Initializer\HelpCommand;
+use AppserverIo\Initializer\AboutCommand;
 use AppserverIo\Initializer\NewCommand;
 
 $appVersion = '0.1.0-DEV';
@@ -16,7 +16,7 @@ if (!isset($_SERVER['PATH']) && isset($_SERVER['Path'])) {
 }
 
 $app = new Application('Appserver Initializer', $appVersion);
-$app->add(new HelpCommand($appVersion));
+$app->add(new AboutCommand($appVersion));
 $app->add(new NewCommand());
-$app->setDefaultCommand('about');
+$app->setDefaultCommand('help');
 $app->run();

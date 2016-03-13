@@ -16,7 +16,7 @@ class Application extends ConsoleApplication
 
     public function doRun(InputInterface $input, OutputInterface $output)
     {
-        $this->setDefaultCommand("help");
+        $this->setDefaultCommand("about");
         return parent::doRun($input, $output);
     }
 
